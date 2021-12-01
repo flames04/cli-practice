@@ -8,7 +8,7 @@
 // differently. There are many paths and approaches that result in a perfectly
 // valid finished product.
 
-const { isAmountValid } = require(`./validator-functions.js`);
+const { isAmountInvalid } = require(`./validator-functions.js`);
 
 // --------------------------------------------------
 // Step 1: Capture user input

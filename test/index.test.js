@@ -11,12 +11,12 @@
 // same file for illustrative and learning purposes.
 
 
-const {isAmountValid} = require(`../src/validator-functions.js`);
+const {isAmountInvalid} = require(`../src/validator-functions.js`);
 
-describe('isAmountValid()', () => {
+describe('isAmountInvalid()', () => {
 	test('should return true when the amount is undefined', () => {
 	  let amount;
-	  const result = isAmountValid();
+	  const result = isAmountInvalid();
 	  expect(result).toBe(true);
 	});
   });
