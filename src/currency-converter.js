@@ -104,3 +104,5 @@ console.log(convertedAmount);
 
 // This message should also include the original amount and currency information
 // supplied by the user.
+
+console.log(`You input ${amount} ${initialCurrency} to be converter to ${targetCurrency}. Your converted amount is ${convertedAmount} ${targetCurrency}`);
