@@ -65,7 +65,20 @@ let CAD = 0.9;
 // If the user supplies an invalid initial or target currency, display a meaningful
 // warning message and exit the program.
 
+const supportedCurrencies = [
+    'USD',
+    'CAD',
+]
 
+if (supportedCurrencies.includes(initialCurrency) === false){
+    console.error(`Initial currency not supported. Received ${initialCurrency}. Supported currencies include ${supportedCurrencies}`);
+    process.exit()
+}
+
+if (supportedCurrencies.includes(targetCurrency) === false){
+    console.error(`Target currency not supported. Received ${targetCurrency}. Supported currencies include ${supportedCurrencies}`);
+    process.exit()
+}
 
 // --------------------------------------------------
 // Step 5: Perform conversion
