@@ -20,3 +20,11 @@ describe('isAmountInvalid()', () => {
 		expect(result).toBe(true);
 	  });
 	});
+
+	describe('isIntCurrencyInvalid()', () => {
+		test('should return true when the amount is undefined', () => {
+			let initialCurrency;
+			const result = isIntCurrencyInvalid();
+			expect(result).toBe(true);
+		  });
+		});
