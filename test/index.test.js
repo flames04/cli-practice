@@ -15,8 +15,8 @@ const {isAmountInvalid} = require(`../src/validator-functions.js`);
 
 describe('isAmountInvalid()', () => {
 	test('should return true when the amount is undefined', () => {
-	  let amount;
-	  const result = isAmountInvalid();
-	  expect(result).toBe(true);
+		let amount;
+		const result = isAmountInvalid();
+		expect(result).toBe(true);
+	  });
 	});
-  });

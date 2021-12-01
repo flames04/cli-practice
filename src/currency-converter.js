@@ -29,7 +29,7 @@ const targetCurrency = process.argv[4];
 // If any of the required information is missing, display a meaningful message
 // and exit the program.
 
-if (isAmountValid(amount)) {
+if (isAmountInvalid(amount)) {
     console.error(`Oh no, the amount must be greater than 0. Received', ${amount}`);
     process.exit();
 }
