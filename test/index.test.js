@@ -11,7 +11,7 @@
 // same file for illustrative and learning purposes.
 
 
-const {isAmountInvalid, isIntCurrencyInvalid} = require(`../src/validator-functions.js`);
+const {isAmountInvalid, isIntCurrencyInvalid, isTrgtCurrencyInvalid} = require(`../src/validator-functions.js`);
 
 describe('isAmountInvalid()', () => {
 	test('should return true when the amount is undefined', () => {
@@ -28,3 +28,11 @@ describe('isAmountInvalid()', () => {
 			expect(result).toBe(true);
 		  });
 		});
+
+	describe('isTrgtCurrencyInvalid()', () => {
+			test('should return true when the amount is undefined', () => {
+				let targetCurrency;
+				const result = isTrgtCurrencyInvalid();
+				expect(result).toBe(true);
+			  });
+			});
