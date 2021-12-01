@@ -9,6 +9,8 @@
 // valid finished product.
 
 const { isAmountInvalid } = require(`./validator-functions.js`);
+const { isIntCurrencyInvalid } = require(`./validator-functions.js`);
+
 
 // --------------------------------------------------
 // Step 1: Capture user input
@@ -33,7 +35,7 @@ if (isAmountInvalid(amount)) {
     console.error(`Oh no, the amount must be greater than 0. Received', ${amount}`);
     process.exit();
 }
-if (initialCurrency === undefined) {
+if (isIntCurrencyInvalid(initialCurrency)) {
     console.error(`Whoops, no initial currency provided. Received', ${initialCurrency}`);
     process.exit()
 }
