@@ -88,8 +88,15 @@ if (supportedCurrencies.includes(targetCurrency) === false){
 
 // Now we will compute the rate, apply it to the amount, and capture the result.
 
+let convertedAmount;
+if(initialCurrency === `USD` && targetCurrency === `CAD`){
+    convertedAmount = amount / CAD;
+}
+if(initialCurrency === `CAD` && targetCurrency === `USD`){
+    convertedAmount = amount * CAD;
+}
 
-
+console.log(convertedAmount);
 // --------------------------------------------------
 // Step 6: Display results
 // --------------------------------------------------
