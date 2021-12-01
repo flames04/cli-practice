@@ -53,7 +53,8 @@ if (targetCurrency === undefined) {
 // The conversion rates do not have to be accurate, athough this resource contains
 // up-to-date rate information: https://www.xe.com/
 
-
+let USD = 1;
+let CAD = 0.9;
 
 // --------------------------------------------------
 // Step 4: Ensure that a conversion rate exists
