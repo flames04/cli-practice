@@ -19,10 +19,6 @@ const amount = process.argv[2]; //store the above content
 const initialCurrency = process.argv[3];
 const targetCurrency = process.argv[4];
 
-console.log(amount);
-console.log(initialCurrency);
-console.log(targetCurrency);
-
 // --------------------------------------------------
 // Step 2: Validate user input
 // --------------------------------------------------
@@ -31,7 +27,19 @@ console.log(targetCurrency);
 // If any of the required information is missing, display a meaningful message
 // and exit the program.
 
+if (amount === undefined || amount < 0) {
+    console.error(`Oh no, the amount must be greater than 0. Received', ${amount}`);
+    process.exit();
+}
+if (initialCurrency === undefined) {
+    console.error(`Whoops, no initial currency provided. Received', ${initialCurrency}`);
+    process.exit()
+}
 
+if (targetCurrency === undefined) {
+    console.error(`Whoops, no target currency provided. Received', ${targetCurrency}`);
+    process.exit()
+}
 
 // --------------------------------------------------
 // Step 3: Define currency conversion rates
