@@ -8,6 +8,8 @@
 // differently. There are many paths and approaches that result in a perfectly
 // valid finished product.
 
+const { isAmountValid } = require(`./validator-functions.js`);
+
 // --------------------------------------------------
 // Step 1: Capture user input
 // --------------------------------------------------
@@ -27,7 +29,7 @@ const targetCurrency = process.argv[4];
 // If any of the required information is missing, display a meaningful message
 // and exit the program.
 
-if (amount === undefined || amount < 0) {
+if (isAmountValid(amount)) {
     console.error(`Oh no, the amount must be greater than 0. Received', ${amount}`);
     process.exit();
 }
@@ -96,7 +98,6 @@ if(initialCurrency === `CAD` && targetCurrency === `USD`){
     convertedAmount = amount * CAD;
 }
 
-console.log(convertedAmount);
 // --------------------------------------------------
 // Step 6: Display results
 // --------------------------------------------------
@@ -105,4 +106,4 @@ console.log(convertedAmount);
 // This message should also include the original amount and currency information
 // supplied by the user.
 
-console.log(`You input ${amount} ${initialCurrency} to be converter to ${targetCurrency}. Your converted amount is ${convertedAmount} ${targetCurrency}`);
+console.log(`You input ${amount} ${initialCurrency} to be converter to ${targetCurrency}. Your converted amount is ${convertedAmount.toFixed(2)} ${targetCurrency}`);

@@ -10,14 +10,13 @@
 // file. In this case we've defined the function and the corresponding test in the
 // same file for illustrative and learning purposes.
 
-function myCoolFunction() {
-  return 'Wow, what a cool function';
-}
 
-describe('myCoolFunction()', () => {
-  test('should return the message: "Wow, what a cool function"', () => {
-    const result = myCoolFunction();
+const {isAmountValid} = require(`../src/validator-functions.js`);
 
-    expect(result).toBe('Wow, what a cool function');
+describe('isAmountValid()', () => {
+	test('should return true when the amount is undefined', () => {
+	  let amount;
+	  const result = isAmountValid();
+	  expect(result).toBe(true);
+	});
   });
-});
