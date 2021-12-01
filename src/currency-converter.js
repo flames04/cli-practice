@@ -8,7 +8,7 @@
 // differently. There are many paths and approaches that result in a perfectly
 // valid finished product.
 
-const { isAmountInvalid, isIntCurrencyInvalid, isTrgtCurrencyInvalid } = require(`./validator-functions.js`);
+const { isAmountInvalid, isIntCurrencyInvalid, isTrgtCurrencyInvalid, } = require(`./validator-functions.js`);
 
 
 // --------------------------------------------------
